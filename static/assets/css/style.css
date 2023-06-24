@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -62,52 +62,6 @@ h6 {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #151515;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 0px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--main-color);
-  border-top-color: #151515;
-  border-bottom-color: #151515;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -307,7 +261,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: url("../img/hero-bg.png") top center;
   background-size: cover;
   position: relative;
@@ -332,7 +286,7 @@ h6 {
   font-weight: 700;
   line-height: 40px;
   color: var(--gray);
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 #hero h2 {
@@ -359,9 +313,8 @@ section {
   line-height: 1px;
   margin: 0 0 5px 0;
   letter-spacing: 2px;
-  text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .section-title h2::after {
   content: "";
@@ -376,8 +329,7 @@ section {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #151515;
 }
 
@@ -387,7 +339,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 28px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .about .content ul {
   list-style: none;
@@ -401,7 +353,19 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
-
+.about .img {
+  display: flex;
+  gap: 36px;
+}
+.about .img img {
+  height: 30px;
+}
+.about .table th {
+  width: 50%;
+}
+.about .table img {
+  width: 70%;
+}
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
@@ -483,7 +447,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(2, 2, 2, 1), rgba(0, 0, 0, 0.5)),
     url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
@@ -493,11 +457,15 @@ section {
   font-size: 28px;
   font-weight: 700;
 }
+.cta h3 span {
+  color: #18d26e;
+  color: #2478ff;
+}
 .cta p {
   color: #fff;
 }
 .cta .cta-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -512,7 +480,7 @@ section {
 .cta .cta-btn:hover {
   background: var(--main-color);
   border-color: var(--main-color);
-  color: #151515;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -717,7 +685,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #fff;
 }
 #footer .footer-top .social-links a {
